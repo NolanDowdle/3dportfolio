@@ -30,7 +30,7 @@ import asu from "./company/asuIcon.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import toDoList from "./toDoList.png";
 
 export {
   logo,
@@ -62,5 +62,5 @@ export {
   asu,
   carrent,
   jobit,
-  tripguide,
+  toDoList
 };
