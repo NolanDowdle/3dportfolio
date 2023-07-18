@@ -16,17 +16,35 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
+    const { name, value } = e.target;
 
+    setForm({ ...form, [name]: value })
   }
 
   const handleSubmit = (e) => {
-
+    e.preventDefault();
+    setLoading(true);
+    emailjs.send("service_wdba0ap", "template_166v8yq", {
+      from_name: form.name,
+      to_name: "Nolan",
+      from_email: form.email,
+      to_email: "njdowdle@gmail.com",
+      message: form.message,
+    }, "USEG-1cafQo0QkkhU").then(() => {
+      setLoading(false);
+      alert("Thank you, I will get back to you as soon as possible.");
+      setForm({
+        name: "",
+        email: "",
+        message: "",
+      })
+    })
   }
 
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10
     overflow-hidden">
-      <motion.div variants={slideIn('left', 'tween', 0.2, 1)}
+      <motion.div variants={slideIn('left', 'tween', 0.2, 0.5)}
       className="flex-[0.75] bg-black-100 p-8 rounded-2xl">
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
@@ -80,7 +98,7 @@ const Contact = () => {
         </form>
       </motion.div>
 
-      <motion.div variants={slideIn('right', 'tween', 0.2, 1)}
+      <motion.div variants={slideIn('right', 'tween', 0.2, 0.5)}
       className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]">
         <EarthCanvas />
       </motion.div>
