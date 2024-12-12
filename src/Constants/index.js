@@ -102,6 +102,18 @@ import {
   
   const experiences = [
     {
+      title: "Software Developer",
+      company_name: "Farragut Systems",
+      icon: inmar,
+      iconBg: "#383E56",
+      date: "September 2023 - December 2024",
+      points: [
+        "Engineered and integrated complex multi-page UIs with backend services and existing products using C#, Radzen Blazor, SQL, and HTML.",
+        "Developed and validated a new API back-end for a cutting-edge product, ensuring seamless integration using C# and SQL.",
+        "Developed and deployed numerous data-driven analytical reports in Power BI Desktop."
+      ],
+    },
+    {
       title: "Software Engineer Intern",
       company_name: "Inmar Intelligence",
       icon: inmar,
@@ -151,6 +163,27 @@ import {
       ],
       image: toDoList,
       source_code_link: "https://github.com/NolanDowdle/ToDoList",
+    },
+    {
+      name: "Solana Real Time Crypto Tracker",
+      description:
+        "Tracks real time transactions on Solana network using Redis, Rust, and Solana API",
+      tags: [
+        {
+          name: "Redis",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Rust",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "Solana",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: toDoList,
+      source_code_link: "https://github.com/NolanDowdle/Solana-Real-Time-Crypto-Transaction-Tracker",
     },
   ];
   
